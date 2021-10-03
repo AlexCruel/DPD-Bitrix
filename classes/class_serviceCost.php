@@ -3,12 +3,13 @@
 class ServiceCost
 {
     public $delCost = array();
-    public $cityPickup, $cityDelivery;
+    public $cityPickup, $cityDelivery, $weight;
 
-    function __construct($cityPickup, $cityDelivery)
+    function __construct($cityPickup, $cityDelivery, $weight)
     {
         $this->cityPickup = $cityPickup;
         $this->cityDelivery = $cityDelivery;
+        $this->weight = $weight;
     }
 
     function stdToArray($obj)

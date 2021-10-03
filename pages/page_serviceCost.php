@@ -4,7 +4,7 @@ include '../settings.php';
 include '../classes/class_serviceCost.php';
 
 // DELIVERY COST
-$cost = new ServiceCost($_REQUEST['cityPickup'], $_REQUEST['cityDelivery']);
+$cost = new ServiceCost($_REQUEST['cityPickup'], $_REQUEST['cityDelivery'], $_REQUEST['weight']);
 $ret = $cost->getServiceCost();
 $mass = $cost->stdToArray($ret);
 
@@ -28,6 +28,8 @@ $mass = $cost->stdToArray($ret);
             <b>
                 <?php
                     echo "$cost->cityPickup => $cost->cityDelivery";
+                    echo "<br>";
+                    echo "Вес груза: $cost->weight кг";
                 ?>
             </b>
         </p>
@@ -53,7 +55,8 @@ $mass = $cost->stdToArray($ret);
                 ?>
             </table>
         </div>
-        <a href="../dpd_test.php" type="button" class="btn btn-primary">Назад</a>
+        <a href="page_pre_serviceCost.php" type="button" class="btn btn-primary">Назад</a>
+        <a href="../dpd_test.php" type="button" class="btn btn-danger">Главное меню</a>
     </div>
 </body>
 

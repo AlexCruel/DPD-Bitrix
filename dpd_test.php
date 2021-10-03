@@ -1,58 +1,4 @@
-<h1>IT IS DPD</h1>
-
 <?php
-
-include 'settings.php';
-include 'classes/class_city.php';
-
-// function stdToArray($obj)
-// {
-//     $rc = (array)$obj;
-
-//     foreach ($rc as $key => $item) {
-//         $rc[$key] = (array)$item;
-
-//         foreach ($rc[$key] as $keys => $items) {
-//             $rc[$key][$keys] = (array)$items;
-//         }
-//     }
-
-//     return $rc;
-// }
-
-// $ret = 'saf';
-
-// function findCity($id_city)
-// {
-//     include 'settings.php';
-
-//     $client = new SoapClient("$server[0]geography2?wsdl");
-
-//     $arData['auth'] = array(
-//         'clientNumber' => $MY_NUMBER,
-//         'clientKey' => $MY_KEY
-//     );
-
-//     $arRequest['request'] = $arData;
-
-//     $ret = $client->getCitiesCashPay($arRequest);
-
-//     return $ret;
-
-// }
-
-// $city = 'Екатеринбург';
-// $findCity = (array)findCity($city);
-// $mass = stdToArray($findCity);
-
-// echo '<pre>';
-// // print_r($findCity);
-
-// $cityClass = new City();
-// $cityClass->regPropsCity($mass, $city);
-// $cityClass->echoPropsCity();
-
-// echo '</pre>';
 
 ?>
 
@@ -68,23 +14,11 @@ include 'classes/class_city.php';
 </head>
 
 <body>
+    <h1>IT IS DPD</h1>
+    <p><a href="pages/page_pre_serviceCost.php" type="button" class="btn btn-warning">Расчет стоимости</a>
+    <hr>
     <div>
-        <form action="pages/page_serviceCost.php" method="POST">
-            <div class="form-group">
-                <label>Город отправки</label>
-                <input value="Минск" name="cityPickup" type="text" class="form-control" aria-describedby="emailHelp" placeholder="Введите город">
-            </div>
-            <div class="form-group">
-                <label>Город доставки</label>
-                <input value="Пинск" name="cityDelivery" type="text" class="form-control" aria-describedby="emailHelp" placeholder="Введите город">
-            </div>
-            <div class="form-group">
-                <label>Вес груза</label>
-                <input value="10" name="weight" type="text" class="form-control" aria-describedby="emailHelp" placeholder="Введите город">
-            </div>
-
-            <button type="submit button" class="btn btn-primary">Рассчитать</button>
-        </form>
+        <h1>Создать заказ</h1>
     </div>
 </body>
 
