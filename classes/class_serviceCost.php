@@ -3,9 +3,12 @@
 class ServiceCost
 {
     public $delCost = array();
+    public $cityPickup, $cityDelivery;
 
-    function __construct()
+    function __construct($cityPickup, $cityDelivery)
     {
+        $this->cityPickup = $cityPickup;
+        $this->cityDelivery = $cityDelivery;
     }
 
     function stdToArray($obj)
@@ -35,11 +38,11 @@ class ServiceCost
                 'clientKey' => $MY_KEY
             ),
             'pickup' => array(
-                'cityName' => $_REQUEST['city1'],
+                'cityName' => $this->cityPickup,
                 'countryCode' => 'BY'
             ),
             'delivery' => array(
-                'cityName' => $_REQUEST['city2'],
+                'cityName' => $this->cityDelivery,
                 'countryCode' => 'BY'
             ),
             'selfPickup' => false,

@@ -69,14 +69,14 @@ include 'classes/class_city.php';
 
 <body>
     <div>
-        <form action="methods/getServiceCost.php" method="POST">
+        <form action="pages/page_serviceCost.php" method="POST">
             <div class="form-group">
                 <label>Город отправки</label>
-                <input value="Минск" name="city1" type="text" class="form-control" aria-describedby="emailHelp" placeholder="Введите город">
+                <input value="Минск" name="cityPickup" type="text" class="form-control" aria-describedby="emailHelp" placeholder="Введите город">
             </div>
             <div class="form-group">
                 <label>Город доставки</label>
-                <input value="Пинск" name="city2" type="text" class="form-control" aria-describedby="emailHelp" placeholder="Введите город">
+                <input value="Пинск" name="cityDelivery" type="text" class="form-control" aria-describedby="emailHelp" placeholder="Введите город">
             </div>
             <div class="form-group">
                 <label>Вес груза</label>

@@ -4,7 +4,7 @@ include '../settings.php';
 include '../classes/class_serviceCost.php';
 
 // DELIVERY COST
-$cost = new ServiceCost();
+$cost = new ServiceCost($_REQUEST['cityPickup'], $_REQUEST['cityDelivery']);
 $ret = $cost->getServiceCost();
 $mass = $cost->stdToArray($ret);
 
@@ -24,6 +24,13 @@ $mass = $cost->stdToArray($ret);
 <body>
     <div>
         <h1>Стоимость доставки</h1>
+        <p>
+            <b>
+                <?php
+                    echo "$cost->cityPickup => $cost->cityDelivery";
+                ?>
+            </b>
+        </p>
         <div>
             <table class="table table-hover">
                 <tr class="thead-dark">
