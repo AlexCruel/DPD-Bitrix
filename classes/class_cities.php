@@ -1,40 +1,54 @@
 <?php
 
-// function stdToArray($obj)
-// {
-//     $rc = (array)$obj;
+class Cities
+{
+    public $countryCode;
 
-//     foreach ($rc as $key => $item) {
-//         $rc[$key] = (array)$item;
+    public function __construct($countryCode)
+    {
+        $this->countryCode = $countryCode;
+    }
 
-//         foreach ($rc[$key] as $keys => $items) {
-//             $rc[$key][$keys] = (array)$items;
-//         }
-//     }
+    function stdToArray($obj)
+    {
+        $rc = (array)$obj;
 
-//     return $rc;
-// }
+        foreach ($rc as $key => $item) {
+            $rc[$key] = (array)$item;
+
+            foreach ($rc[$key] as $keys => $items) {
+                $rc[$key][$keys] = (array)$items;
+            }
+        }
+
+        return $rc;
+    }
+
+    public function findCities()
+    {
+        include '../settings.php';
+
+        $client = new SoapClient("$server[0]geography2?wsdl");
+
+        $arData = array(
+            'auth' => array(
+                'clientNumber' => $MY_NUMBER,
+                'clientKey' => $MY_KEY
+            ),
+            'countryCode' => $this->countryCode
+        );
+
+        $arRequest['request'] = $arData;
+
+        $ret = $client->getCitiesCashPay($arRequest);
+
+        return $ret;
+    }
+}
 
 // $ret = 'saf';
 
-// function findCity($id_city)
-// {
-//     include 'settings.php';
 
-//     $client = new SoapClient("$server[0]geography2?wsdl");
-
-//     $arData['auth'] = array(
-//         'clientNumber' => $MY_NUMBER,
-//         'clientKey' => $MY_KEY
-//     );
-
-//     $arRequest['request'] = $arData;
-
-//     $ret = $client->getCitiesCashPay($arRequest);
-
-//     return $ret;
-
-// }
 
 // $city = 'Екатеринбург';
 // $findCity = (array)findCity($city);
@@ -50,3 +64,6 @@
 // echo '</pre>';
 
 ?>
+
+
+

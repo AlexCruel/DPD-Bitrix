@@ -15,7 +15,10 @@
 
 <body>
     <h1>IT IS DPD</h1>
-    <p><a href="pages/page_pre_serviceCost.php" type="button" class="btn btn-warning">Расчет стоимости</a>
+    <div>
+        <a href="pages/page_citiesCashPay.php" type="button" class="btn btn-warning">Города доставки</a>
+        <a href="pages/page_pre_serviceCost.php" type="button" class="btn btn-warning">Расчет стоимости</a>
+    </div>
     <hr>
     <div>
         <h1>Создать заказ</h1>

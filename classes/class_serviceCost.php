@@ -5,7 +5,7 @@ class ServiceCost
     public $delCost = array();
     public $cityPickup, $cityDelivery, $weight;
 
-    function __construct($cityPickup, $cityDelivery, $weight)
+    public function __construct($cityPickup, $cityDelivery, $weight)
     {
         $this->cityPickup = $cityPickup;
         $this->cityDelivery = $cityDelivery;
@@ -58,3 +58,5 @@ class ServiceCost
         return $ret;
     }
 }
+
+?>
