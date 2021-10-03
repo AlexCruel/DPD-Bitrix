@@ -16,12 +16,70 @@
 <body>
     <h1>IT IS DPD</h1>
     <div>
-        <a href="pages/page_citiesCashPay.php" type="button" class="btn btn-warning">Города доставки</a>
+        <a href="pages/page_citiesCashPay.php" type="button" class="btn btn-warning" style="margin-right: 20px;">Города доставки</a>
         <a href="pages/page_pre_serviceCost.php" type="button" class="btn btn-warning">Расчет стоимости</a>
     </div>
     <hr>
     <div>
         <h1>Создать заказ</h1>
+        <form>
+
+            <h3 style="color: #C85546">Пункт отправления</h3>
+            <div class="form-row form-group">
+                <div class="col">
+                    <input placeholder="Дата приема груза">
+                </div>
+                <div class="col">
+                    <input placeholder="Город">
+                </div>
+            </div>
+            <div class="form-row form-group">
+                <div class="col">
+                    <input placeholder="Время приема груза">
+                </div>
+                <div class="col">
+                    <input placeholder="Адрес приема груза">
+                </div>
+            </div>
+
+            <h3 style="color: #C85546">Груз</h3>
+            <div class="form-row form-group">
+                <div class="col">
+                    <input placeholder="Дата приема груза">
+                </div>
+                <div class="col">
+                    <input placeholder="Город">
+                </div>
+            </div>
+            <div class="form-row form-group">
+                <div class="col">
+                    <input placeholder="Время приема груза">
+                </div>
+                <div class="col">
+                    <input placeholder="Адрес приема груза">
+                </div>
+            </div>
+
+            <h3 style="color: #C85546">Заказчик</h3>
+            <div class="form-row form-group">
+                <div class="col">
+                    <input placeholder="ФИО">
+                </div>
+                <div class="col">
+                    <input placeholder="Город">
+                </div>
+            </div>
+            <div class="form-row form-group">
+                <div class="col">
+                    <input placeholder="Телефон">
+                </div>
+                <div class="col">
+                    <input placeholder="Адрес доставки">
+                </div>
+            </div>
+
+            <p><button type="submit button" class="btn btn-success">Отправить</button></p>
+        </form>
     </div>
 </body>
 

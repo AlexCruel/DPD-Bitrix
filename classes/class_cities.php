@@ -46,23 +46,6 @@ class Cities
     }
 }
 
-// $ret = 'saf';
-
-
-
-// $city = 'Екатеринбург';
-// $findCity = (array)findCity($city);
-// $mass = stdToArray($findCity);
-
-// echo '<pre>';
-// // print_r($findCity);
-
-// $cityClass = new City();
-// $cityClass->regPropsCity($mass, $city);
-// $cityClass->echoPropsCity();
-
-// echo '</pre>';
-
 ?>
 
 
